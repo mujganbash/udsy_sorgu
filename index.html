@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÜDSY Əlahiddəlik Sorğusu - e-Social</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://e-social.gov.az/site/assets/images/favicon.png" type="image/x-icon">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ÜDSY Əlahiddəlik Sorğusu - e-Social">
+    <meta property="og:description" content="Ünvanlı Dövlət Sosial Yardımına müraciət üçün əlahiddəlik sorğusu. Ailənizin sosial yardım almaq hüququ olub-olmadığını yoxlayın.">
+    <meta property="og:image" content="https://e-social.gov.az/site/assets/images/seo-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="ÜDSY Əlahiddəlik Sorğusu">
+    <meta property="og:url" content="https://e-social.gov.az/udsy-sorgu">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="e-Social">
+    <meta property="og:locale" content="az_AZ">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ÜDSY Əlahiddəlik Sorğusu - e-Social">
+    <meta name="twitter:description" content="Ünvanlı Dövlət Sosial Yardımına müraciət üçün əlahiddəlik sorğusu">
+    <meta name="twitter:image" content="https://e-social.gov.az/site/assets/images/seo-image.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ünvanlı Dövlət Sosial Yardımına müraciət üçün əlahiddəlik sorğusu. Ailənizin sosial yardım almaq hüququ olub-olmadığını yoxlayın.">
+    <meta name="keywords" content="ÜDSY, sosial yardım, əlahiddəlik sorğusu, e-social, Azərbaycan">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with title and laws button -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Ünvanlı Dövlət Sosial Yardımına Müraciət Sorğusu</h1>
+            <button onclick="openLaws()" class="laws-btn">Qanunlar</button>
+        </div>
+    </header>
+    <div class="container">
+        <div id="form-section">
+            <form id="survey-form">
+                <!-- Q1: Family Size -->
+                <div class="question-group">
+                    <label for="q1">1. Ailə tərkibiniz (eyni mənzildə yaşayan) neçə nəfərdən ibarətdir?</label>
+                    <input type="number" id="q1" name="q1" min="1" required>
+                </div>
+
+                <!-- Q2: Unemployed able-bodied member -->
+                <div class="question-group">
+                    <label>2. Ailə tərkibinizdə əmək qabiliyyətli olmasına baxmayaraq işləməyən şəxs varmı?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q2" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q2" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q3: Child under 8 -->
+                <div class="question-group">
+                    <label>3. Ailə tərkibinizdə 8 yaşadək uşaq varmı?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q3" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q3" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q4: Rented residence -->
+                <div class="question-group">
+                    <label>4. Yaşadığınız mənzil kirayədirmi?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q4" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q4" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q5: Notarized rental contract (conditional) -->
+                <div class="question-group" id="q5-group" style="display: none;">
+                    <label>5. Notarial qaydada təsdiq edilmiş kirayə müqaviləniz mövcuddurmu?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q5" value="yes"> Bəli</label>
+                        <label><input type="radio" name="q5" value="no"> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q6: Family income -->
+                <div class="question-group">
+                    <label for="q6">6. Ailənin müraciətdən əvvəlki ardıcıl 12 ay üzrə ümumi gəliri (AZN) nə qədərdir?</label>
+                    <input type="number" id="q6" name="q6" min="0" required>
+                </div>
+
+                <!-- Q7: Vehicle ownership -->
+                <div class="question-group">
+                    <label>7. Ailənin mülkiyyətində və ya istifadəsində nəqliyyat vasitəsi varmı?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q7" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q7" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q8: Multiple properties -->
+                <div class="question-group">
+                    <label>8. Ailənin mülkiyyətində və ya istifadəsində müxtəlif ünvanda 2 və daha çox eyni təyinatlı daşınmaz əmlak varmı?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q8" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q8" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q9: Large transactions -->
+                <div class="question-group">
+                    <label>9. Son 12 ayda yaşayış minimumunun 12 mislindən çox məbləğdə alqı-satqı edilibmi?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q9" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q9" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <!-- Q10: Utilities and communication costs -->
+                <div class="question-group">
+                    <label for="q10">10. Ailənin kommunal + rabitə xərclərinin orta aylıq cəmi təxmini nə qədərdir? (AZN)</label>
+                    <input type="number" id="q10" name="q10" min="0" step="1" required>
+                </div>
+
+                <!-- Q11: Registry match -->
+                <div class="question-group">
+                    <label>11. Ərizə-bəyannamədə göstəriləcək məlumatların hamısı rəsmi reyestrlərlə tam uyğun olacaqmı?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="q11" value="yes" required> Bəli</label>
+                        <label><input type="radio" name="q11" value="no" required> Xeyr</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Nəticəni Göstər</button>
+            </form>
+        </div>
+
+        <div id="result-section" style="display: none;">
+            <div class="result-box">
+                <p id="result-text"></p>
+                <a id="gov-link" href="https://mygovid.gov.az/auth" target="_blank" style="display: none; margin-top: 15px; display: inline-block; padding: 10px 20px; background-color: #16abff; color: white; text-decoration: none; border-radius: 5px;">Rəsmi Müraciət üçün Daxil olun →</a>
+                <button class="reset-btn" onclick="location.reload()">Yenidən Başlayın</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function openLaws() {
+            window.location.href = 'laws.html';
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+{
+  "name": "udsy_sorgu",
+  "version": "1.0.0",
+  "description": "ÜDSY Əlahiddəlik Sorğusu - Azərbaycan dilində sosial yardım üçün ərizə müraciəti sorğu forması",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -c-1",
+    "dev": "http-server -p 8000 -c-1 --cors",
+    "serve": "http-server -p 8000"
+  },
+  "keywords": [
+    "udsy",
+    "sosial-yardim",
+    "azerbaijan",
+    "survey",
+    "form"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": ""
+}
